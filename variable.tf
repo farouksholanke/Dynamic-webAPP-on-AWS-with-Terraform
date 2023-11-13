@@ -48,7 +48,7 @@ variable "ssh_location" {
  type        = string
 }
 
-#rds variables
+# rds variables
 variable "database_snapshot_identifier" {
  default     = "arn:aws:rds:us-east-1:065759301263:snapshot:fleetcart-final-snapshot"
  description = "database snapshot arn"
@@ -73,9 +73,16 @@ variable "multi_az_deployment" {
  type        = bool
 }
 
-#alb variables
+# alb variables
 variable "ssl_certificate_arn" {
  default     = "arn:aws:acm:us-east-1:065759301263:certificate/39c094c0-ec0c-42cb-a00d-26b53e3c0cfa"
  description = "ssl certificate arn"
+ type        = string
+}
+
+# sns topic variables
+variable "operator_email" {
+ default     = "zayd.farouk@gmail.com"
+ description = "a valid email address"
  type        = string
 }
