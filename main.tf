@@ -1,7 +1,7 @@
 # configure aws provider
 provider "aws" {
   region = "us-east-1"
-  profile = "terraform-user"
+  profile = "programmatic-user"
 }
 
 # stores the terraform state file in s3
@@ -10,6 +10,6 @@ terraform {
     bucket = "zayd-terraform-remote-state"
     key    = "terraform.tfstate.dev"
     region = "us-east-1"
-    profile = "terraform-user"
+    profile = "programmatic-user"
   }
 }
